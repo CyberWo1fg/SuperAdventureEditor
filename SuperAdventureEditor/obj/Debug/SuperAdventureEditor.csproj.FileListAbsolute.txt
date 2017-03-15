@@ -1,0 +1,9 @@
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\bin\Debug\SuperAdventureEditor.exe.config
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\bin\Debug\SuperAdventureEditor.exe
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\bin\Debug\SuperAdventureEditor.pdb
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.csprojResolveAssemblyReference.cache
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.Properties.Resources.resources
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.csproj.GenerateResource.Cache
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.exe
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.pdb
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.EditorForm.resources
