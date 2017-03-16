@@ -7,3 +7,5 @@ D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debu
 D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.exe
 D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.pdb
 D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\obj\Debug\SuperAdventureEditor.EditorForm.resources
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\bin\Debug\Engine.dll
+D:\devel\SuperAdventureEditor\SuperAdventureEditor\SuperAdventureEditor\bin\Debug\Engine.pdb

@@ -34,18 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSaveToFile = new System.Windows.Forms.Button();
             this.pMainPanel = new System.Windows.Forms.Panel();
             this.tcDataTabs = new System.Windows.Forms.TabControl();
             this.tpItems = new System.Windows.Forms.TabPage();
-            this.tpQuests = new System.Windows.Forms.TabPage();
-            this.tpMonsters = new System.Windows.Forms.TabPage();
-            this.tpNPCs = new System.Windows.Forms.TabPage();
-            this.tpLocations = new System.Windows.Forms.TabPage();
             this.dgvItems = new System.Windows.Forms.DataGridView();
-            this.dgvQuests = new System.Windows.Forms.DataGridView();
-            this.dgvMonsters = new System.Windows.Forms.DataGridView();
-            this.dgvNPCs = new System.Windows.Forms.DataGridView();
-            this.dgvLocations = new System.Windows.Forms.DataGridView();
             this.cItemsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cItemsType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cItemsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,18 +47,30 @@
             this.cItemsHealPoints = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cItemsMinD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cItemsMaxD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveToFile = new System.Windows.Forms.Button();
+            this.msItems = new System.Windows.Forms.MenuStrip();
+            this.tsmiAddRow = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDeleteRow = new System.Windows.Forms.ToolStripMenuItem();
+            this.tpQuests = new System.Windows.Forms.TabPage();
+            this.dgvQuests = new System.Windows.Forms.DataGridView();
+            this.tpMonsters = new System.Windows.Forms.TabPage();
+            this.dgvMonsters = new System.Windows.Forms.DataGridView();
+            this.tpNPCs = new System.Windows.Forms.TabPage();
+            this.dgvNPCs = new System.Windows.Forms.DataGridView();
+            this.tpLocations = new System.Windows.Forms.TabPage();
+            this.dgvLocations = new System.Windows.Forms.DataGridView();
+            this.tbDataFolderPath = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tcDataTabs.SuspendLayout();
             this.tpItems.SuspendLayout();
-            this.tpQuests.SuspendLayout();
-            this.tpMonsters.SuspendLayout();
-            this.tpNPCs.SuspendLayout();
-            this.tpLocations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
+            this.msItems.SuspendLayout();
+            this.tpQuests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
+            this.tpMonsters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonsters)).BeginInit();
+            this.tpNPCs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNPCs)).BeginInit();
+            this.tpLocations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +83,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSaveToFile, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pMainPanel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tcDataTabs, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tbDataFolderPath, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -87,6 +93,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(924, 532);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btnSaveToFile
+            // 
+            this.btnSaveToFile.Location = new System.Drawing.Point(246, 3);
+            this.btnSaveToFile.Name = "btnSaveToFile";
+            this.btnSaveToFile.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveToFile.TabIndex = 4;
+            this.btnSaveToFile.Text = "Save";
+            this.btnSaveToFile.UseVisualStyleBackColor = true;
+            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
             // 
             // pMainPanel
             // 
@@ -115,6 +131,7 @@
             // tpItems
             // 
             this.tpItems.Controls.Add(this.dgvItems);
+            this.tpItems.Controls.Add(this.msItems);
             this.tpItems.Location = new System.Drawing.Point(4, 22);
             this.tpItems.Name = "tpItems";
             this.tpItems.Padding = new System.Windows.Forms.Padding(3);
@@ -123,49 +140,9 @@
             this.tpItems.Text = "Предметы";
             this.tpItems.UseVisualStyleBackColor = true;
             // 
-            // tpQuests
-            // 
-            this.tpQuests.Controls.Add(this.dgvQuests);
-            this.tpQuests.Location = new System.Drawing.Point(4, 22);
-            this.tpQuests.Name = "tpQuests";
-            this.tpQuests.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuests.Size = new System.Drawing.Size(271, 450);
-            this.tpQuests.TabIndex = 1;
-            this.tpQuests.Text = "Задания";
-            this.tpQuests.UseVisualStyleBackColor = true;
-            // 
-            // tpMonsters
-            // 
-            this.tpMonsters.Controls.Add(this.dgvMonsters);
-            this.tpMonsters.Location = new System.Drawing.Point(4, 22);
-            this.tpMonsters.Name = "tpMonsters";
-            this.tpMonsters.Size = new System.Drawing.Size(271, 450);
-            this.tpMonsters.TabIndex = 2;
-            this.tpMonsters.Text = "Монстры";
-            this.tpMonsters.UseVisualStyleBackColor = true;
-            // 
-            // tpNPCs
-            // 
-            this.tpNPCs.Controls.Add(this.dgvNPCs);
-            this.tpNPCs.Location = new System.Drawing.Point(4, 22);
-            this.tpNPCs.Name = "tpNPCs";
-            this.tpNPCs.Size = new System.Drawing.Size(271, 450);
-            this.tpNPCs.TabIndex = 3;
-            this.tpNPCs.Text = "NPC";
-            this.tpNPCs.UseVisualStyleBackColor = true;
-            // 
-            // tpLocations
-            // 
-            this.tpLocations.Controls.Add(this.dgvLocations);
-            this.tpLocations.Location = new System.Drawing.Point(4, 22);
-            this.tpLocations.Name = "tpLocations";
-            this.tpLocations.Size = new System.Drawing.Size(271, 450);
-            this.tpLocations.TabIndex = 4;
-            this.tpLocations.Text = "Локации";
-            this.tpLocations.UseVisualStyleBackColor = true;
-            // 
             // dgvItems
             // 
+            this.dgvItems.AllowUserToAddRows = false;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cItemsID,
@@ -177,48 +154,13 @@
             this.cItemsMinD,
             this.cItemsMaxD});
             this.dgvItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvItems.Location = new System.Drawing.Point(3, 3);
+            this.dgvItems.Location = new System.Drawing.Point(3, 27);
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.RowHeadersVisible = false;
-            this.dgvItems.Size = new System.Drawing.Size(661, 444);
+            this.dgvItems.Size = new System.Drawing.Size(661, 420);
             this.dgvItems.TabIndex = 3;
             this.dgvItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellContentClick);
-            // 
-            // dgvQuests
-            // 
-            this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvQuests.Location = new System.Drawing.Point(3, 3);
-            this.dgvQuests.Name = "dgvQuests";
-            this.dgvQuests.Size = new System.Drawing.Size(265, 444);
-            this.dgvQuests.TabIndex = 4;
-            // 
-            // dgvMonsters
-            // 
-            this.dgvMonsters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMonsters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMonsters.Location = new System.Drawing.Point(0, 0);
-            this.dgvMonsters.Name = "dgvMonsters";
-            this.dgvMonsters.Size = new System.Drawing.Size(271, 450);
-            this.dgvMonsters.TabIndex = 4;
-            // 
-            // dgvNPCs
-            // 
-            this.dgvNPCs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNPCs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvNPCs.Location = new System.Drawing.Point(0, 0);
-            this.dgvNPCs.Name = "dgvNPCs";
-            this.dgvNPCs.Size = new System.Drawing.Size(271, 450);
-            this.dgvNPCs.TabIndex = 4;
-            // 
-            // dgvLocations
-            // 
-            this.dgvLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocations.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLocations.Location = new System.Drawing.Point(0, 0);
-            this.dgvLocations.Name = "dgvLocations";
-            this.dgvLocations.Size = new System.Drawing.Size(271, 450);
-            this.dgvLocations.TabIndex = 4;
+            this.dgvItems.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvItems_RowsAdded);
             // 
             // cItemsID
             // 
@@ -286,15 +228,114 @@
             this.cItemsMaxD.Name = "cItemsMaxD";
             this.cItemsMaxD.Width = 50;
             // 
-            // btnSaveToFile
+            // msItems
             // 
-            this.btnSaveToFile.Location = new System.Drawing.Point(246, 3);
-            this.btnSaveToFile.Name = "btnSaveToFile";
-            this.btnSaveToFile.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveToFile.TabIndex = 4;
-            this.btnSaveToFile.Text = "Save";
-            this.btnSaveToFile.UseVisualStyleBackColor = true;
-            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
+            this.msItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAddRow,
+            this.tsmiDeleteRow});
+            this.msItems.Location = new System.Drawing.Point(3, 3);
+            this.msItems.Name = "msItems";
+            this.msItems.Size = new System.Drawing.Size(661, 24);
+            this.msItems.TabIndex = 4;
+            this.msItems.Text = "menuStrip1";
+            // 
+            // tsmiAddRow
+            // 
+            this.tsmiAddRow.Name = "tsmiAddRow";
+            this.tsmiAddRow.Size = new System.Drawing.Size(111, 20);
+            this.tsmiAddRow.Text = "Добавить строку";
+            this.tsmiAddRow.Click += new System.EventHandler(this.tsmiAddRow_Click);
+            // 
+            // tsmiDeleteRow
+            // 
+            this.tsmiDeleteRow.Name = "tsmiDeleteRow";
+            this.tsmiDeleteRow.Size = new System.Drawing.Size(102, 20);
+            this.tsmiDeleteRow.Text = "УдалитьСтроку";
+            // 
+            // tpQuests
+            // 
+            this.tpQuests.Controls.Add(this.dgvQuests);
+            this.tpQuests.Location = new System.Drawing.Point(4, 22);
+            this.tpQuests.Name = "tpQuests";
+            this.tpQuests.Padding = new System.Windows.Forms.Padding(3);
+            this.tpQuests.Size = new System.Drawing.Size(667, 450);
+            this.tpQuests.TabIndex = 1;
+            this.tpQuests.Text = "Задания";
+            this.tpQuests.UseVisualStyleBackColor = true;
+            // 
+            // dgvQuests
+            // 
+            this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvQuests.Location = new System.Drawing.Point(3, 3);
+            this.dgvQuests.Name = "dgvQuests";
+            this.dgvQuests.Size = new System.Drawing.Size(661, 444);
+            this.dgvQuests.TabIndex = 4;
+            // 
+            // tpMonsters
+            // 
+            this.tpMonsters.Controls.Add(this.dgvMonsters);
+            this.tpMonsters.Location = new System.Drawing.Point(4, 22);
+            this.tpMonsters.Name = "tpMonsters";
+            this.tpMonsters.Size = new System.Drawing.Size(667, 450);
+            this.tpMonsters.TabIndex = 2;
+            this.tpMonsters.Text = "Монстры";
+            this.tpMonsters.UseVisualStyleBackColor = true;
+            // 
+            // dgvMonsters
+            // 
+            this.dgvMonsters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonsters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMonsters.Location = new System.Drawing.Point(0, 0);
+            this.dgvMonsters.Name = "dgvMonsters";
+            this.dgvMonsters.Size = new System.Drawing.Size(667, 450);
+            this.dgvMonsters.TabIndex = 4;
+            // 
+            // tpNPCs
+            // 
+            this.tpNPCs.Controls.Add(this.dgvNPCs);
+            this.tpNPCs.Location = new System.Drawing.Point(4, 22);
+            this.tpNPCs.Name = "tpNPCs";
+            this.tpNPCs.Size = new System.Drawing.Size(667, 450);
+            this.tpNPCs.TabIndex = 3;
+            this.tpNPCs.Text = "NPC";
+            this.tpNPCs.UseVisualStyleBackColor = true;
+            // 
+            // dgvNPCs
+            // 
+            this.dgvNPCs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNPCs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNPCs.Location = new System.Drawing.Point(0, 0);
+            this.dgvNPCs.Name = "dgvNPCs";
+            this.dgvNPCs.Size = new System.Drawing.Size(667, 450);
+            this.dgvNPCs.TabIndex = 4;
+            // 
+            // tpLocations
+            // 
+            this.tpLocations.Controls.Add(this.dgvLocations);
+            this.tpLocations.Location = new System.Drawing.Point(4, 22);
+            this.tpLocations.Name = "tpLocations";
+            this.tpLocations.Size = new System.Drawing.Size(667, 450);
+            this.tpLocations.TabIndex = 4;
+            this.tpLocations.Text = "Локации";
+            this.tpLocations.UseVisualStyleBackColor = true;
+            // 
+            // dgvLocations
+            // 
+            this.dgvLocations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLocations.Location = new System.Drawing.Point(0, 0);
+            this.dgvLocations.Name = "dgvLocations";
+            this.dgvLocations.Size = new System.Drawing.Size(667, 450);
+            this.dgvLocations.TabIndex = 4;
+            // 
+            // tbDataFolderPath
+            // 
+            this.tbDataFolderPath.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbDataFolderPath.Location = new System.Drawing.Point(33, 3);
+            this.tbDataFolderPath.Name = "tbDataFolderPath";
+            this.tbDataFolderPath.Size = new System.Drawing.Size(207, 20);
+            this.tbDataFolderPath.TabIndex = 5;
             // 
             // EditorForm
             // 
@@ -302,20 +343,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 532);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MainMenuStrip = this.msItems;
             this.Name = "EditorForm";
             this.Text = "Редактор для игры SuperAdventure";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditorForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tcDataTabs.ResumeLayout(false);
             this.tpItems.ResumeLayout(false);
-            this.tpQuests.ResumeLayout(false);
-            this.tpMonsters.ResumeLayout(false);
-            this.tpNPCs.ResumeLayout(false);
-            this.tpLocations.ResumeLayout(false);
+            this.tpItems.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
+            this.msItems.ResumeLayout(false);
+            this.msItems.PerformLayout();
+            this.tpQuests.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
+            this.tpMonsters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonsters)).EndInit();
+            this.tpNPCs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNPCs)).EndInit();
+            this.tpLocations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocations)).EndInit();
             this.ResumeLayout(false);
 
@@ -345,6 +392,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cItemsMinD;
         private System.Windows.Forms.DataGridViewTextBoxColumn cItemsMaxD;
         private System.Windows.Forms.Button btnSaveToFile;
+        private System.Windows.Forms.TextBox tbDataFolderPath;
+        private System.Windows.Forms.MenuStrip msItems;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAddRow;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDeleteRow;
     }
 }
 
