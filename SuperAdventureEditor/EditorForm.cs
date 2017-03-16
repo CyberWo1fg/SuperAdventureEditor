@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace SuperAdventureEditor
 {
     public partial class EditorForm : Form
     {
+
         private const int bs = 60;
         private int rowCount = 7;
         private int colCount = 7;
@@ -59,8 +61,18 @@ namespace SuperAdventureEditor
         {
             int x = ((Point)((PictureBox)sender).Tag).X;
             int y = ((Point)((PictureBox)sender).Tag).Y;
-            MessageBox.Show(x.ToString() + " " + y.ToString());
+            //MessageBox.Show(x.ToString() + " " + y.ToString());
 
+        }
+
+        private void dgvItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSaveToFile_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
         }
     }
 }
